@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600&display=swap');
+
+* {font-family: 'Inter';font-style: normal;}
+h2 {font-weight: 600;font-size: 30px;line-height: 38px;color: #21114D;margin: 0;}
+
+
+
+.Listings .tab_Section {border-bottom: 1px solid #E0DEF7; margin-bottom: 20px;margin-top: 9px;}
+.tab_Section.nav-pills a {    font-weight: 600;font-size: 14px;line-height: 20px;color: #21114D;padding: 11px;border-bottom: 1px solid #fff;}
+.tab_Section.nav-pills .nav-link.active, .tab_Section.nav-pills .show>.nav-link {background: transparent;font-weight: 600;font-size: 14px;
+    line-height: 20px;color: #6341E0;border-bottom: 1px solid #6341E0;border-radius: 0;}
+.tabletab_Sec {margin: 20px 24px;float: left;grid-gap: 0;gap: 0;border: 1px solid #E0DEF7;border-radius: 8px;}
+.tabletab_Sec .nav-item {border-right: 1px solid #E0DEF7;}
+.table_tab {float: left;width: 100%;}
+.table_tab .tab-content {margin-top: 20px; width: 100%; float: left;}
+.tabletab_Sec.nav-pills .nav-link.active, .tabletab_Sec.nav-pills .show>.nav-link {background-color: #F7F7FD;font-weight: 600;
+    font-size: 14px;line-height: 20px;color: #6341E0;padding: 10px 16px;}
+.table_tab .table-responsive {background: #FFFFFF;border: 1px solid #E0DEF7;border-radius: 0 0 8px 8px;}
+.Listings {padding: 50px;position: relative;background: #F7F7FD; text-align: left;}
+.Listings .heading_section {display: grid;grid-template-columns: 1fr auto auto;grid-column-gap: 12px;}
+.Listings .heading_section button{height: fit-content;}
+.Search_Filters{display: grid;grid-template-columns: 1fr auto;}
+.Search_Filters .input-group {width: fit-content;}
+.Search_Filters .form-control {border-left: 0;}
+.input-group-text {background-color: #fff !important;border-right: none !important;}
+.table p{margin-bottom: 0;}
+.table a{font-weight: 600;font-size: 14px;line-height: 20px;color: #6341E0;text-decoration: none;}
+.table tr {display: grid;align-items: center;grid-template-columns: auto repeat(6 , 1fr);border-bottom: 1px solid #E0DEF7;padding: 3px 16px;}
+.table th {border: none;}
+.table td {border: none;align-items: center;display: flex;}
+.table .Created_img {width: 32px;margin-right: 10px;}
+.table .listed {font-weight: 500;font-size: 12px;line-height: 18px;color: #21AA48;display: grid;grid-template-columns: auto 1fr;grid-gap: 5px;}
+.table .listed span{font-size: 40px;margin-top: -12px;}
+.table_section {border: 1px solid #E0DEF7;border-radius: 12px;margin-top: 24px;float: left;background: #fff;width: 100%;}
+
+.table .card_info {margin: 0;}
+.table_card .card {border: none;display: grid;grid-template-columns: auto 1fr;grid-gap: 12px;}
+.table_card .card-header {border: none;background: transparent;padding: 0;}
+.table_card .card-title {font-weight: 500;font-size: 14px;line-height: 20px;color: #21114D;margin: 0;}
+.table_card .card-body {padding: 0;}
+.table_card .card-text {font-weight: 400;font-size: 14px;line-height: 20px;color: #21114D;margin: 0 !important;}

@@ -1,0 +1,232 @@
+.Agent_bgg_data {
+    display: grid;
+    grid-template-columns: 500px auto;
+    height: 100vh;
+}
+.LeftAgentAccount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: #21114D;
+    color: #fff;
+    padding: 45px;
+}
+.creatAgentLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Agent_account_Data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.OpenAccount h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.OpenAccount h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E0DEF7;
+    margin-bottom: 0;
+}
+.creatAgentLogin h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.support {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.support i {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.support h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+/*Icon progressbar*/
+.Agent_account_Data #progressbar {
+    margin-bottom: 0;
+    overflow: hidden;
+    color: #FFFFFF;
+    padding-left: 0px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 999;
+} 
+.Agent_account_Data #progressbar li {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+.Agent_account_Data #progressbar .step0:before {
+    font-family: FontAwesome;
+    content: ".";
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 0;
+}
+.Agent_account_Data ul#progressbar li a {
+    text-align: left;
+}
+.Agent_account_Data #progressbar li:before {
+    width: 40px;
+    height: 40px;
+    /* line-height: 40px; */
+    display: block;
+    background: transparent;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0px;
+    border: 1px solid #FFFFFF;
+}
+.Agent_account_Data #progressbar li:after {
+    content: '';
+    width: 2px;
+    height: 57px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 18px;
+    top: 40px;
+}
+.Agent_account_Data #progressbar li:last-child:after {
+    position: absolute;
+    height: 0px;
+}
+.Agent_account_Data #progressbar li.active:before, #progressbar li.active:after {
+    background: #6341E0;
+    border: none;
+}
+.Agent_account_Data #progressbar li.active:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    font-size: 20px;
+    line-height: 2;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+.icon-content { 
+    padding-bottom: 20px;
+}
+
+
+
+
+/* RytAgentAccount */
+
+.RytAgentAccount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F7F7FD;
+}
+.AgentCreateAcct {
+    width: 100%;
+    max-width: 360px;
+}
+.agtCrtHead h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: #21114D;
+}
+
+
+
+/* responsive started  */
+
+@media (max-width: 991px){
+    .Agent_bgg_data {
+        grid-template-columns: 50% auto;
+    }
+}
+
+@media (max-width: 830px){
+    .OpenAccount h6 {
+        font-size: 13px;
+    }
+    .OpenAccount h4 {
+        font-size: 14px;
+    }
+    .Agent_account_Data #progressbar li.active:before {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 771px){
+    .Agent_bgg_data {
+        grid-template-columns: 1fr;
+    }
+    .LeftAgentAccount {
+        padding: 25px;
+    }
+    .Agent_account_Data {
+        padding: 25px;
+    }
+    .RytAgentAccount {
+        padding: 25px 0px;
+    }
+    .AgentCreateAcct {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 543px){
+    .AgentCreateAcct {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 480px){
+    .AgentCreateAcct {
+        max-width: 360px;
+    }
+
+}
+
+@media (max-width: 380px){
+    .LeftAgentAccount {
+        padding: 20px;
+    }
+    .AgentCreateAcct {
+        max-width: 330px;
+    }
+    .agtCrtHead h2 {
+        font-size: 28px;
+    }
+    .OpenAccount h6 {
+        font-size: 11px;
+    }
+
+}
+

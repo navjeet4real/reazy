@@ -1,0 +1,10 @@
+.Reazy_section {
+    text-align: center;
+    display: grid !important;
+    grid-template-columns: 280px 1fr;
+}
+.Agent_bgg_data {
+    display: grid;
+    grid-template-columns: 500px auto;
+    height: 100vh;
+}

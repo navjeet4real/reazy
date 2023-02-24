@@ -1,0 +1,160 @@
+.AgetSelctPaymentsbox{
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+    border-radius: 12px;
+    width: 100%;
+}
+.SelctPayments {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px;
+}
+.SelctPayments img {
+    width: 100%;
+    max-width: 60px;
+}
+.sltpaymethd {
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #EAECF0;
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sltpaymethd img {
+    width: 100%;
+    max-width: 28px;
+}
+.SelctPaymentsData h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #21114D;
+}
+.SelctPaymentsData p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #21114D;
+    max-width: 309px;
+    margin-bottom: 0;
+}
+.selectPayCard {
+    border-top: 2px solid #E0DEF7;
+    border-bottom: 2px solid #E0DEF7;
+    padding: 24px;
+}
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.wt{
+    width: 75% !important;
+}
+.wst{
+    width: 25% !important;
+}
+
+.SelctPaycards label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #21114D;
+}
+.SelctPaycards input {
+    padding: 10px 14px;
+    background: #FFFFFF;
+    border: 1px solid #E0DEF7;
+    border-radius: 8px;
+    color: #21114D;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.SelctPaycards input:focus {
+    background: #FFFFFF;
+    border: 1px solid #E0DEF7;
+    border-radius: 8px;
+    outline: 0;
+    box-shadow: none;
+}
+.SelctPaycards input::placeholder {
+    color: #21114D;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.cardForm{
+   position: relative;
+}
+.cardForm input{
+    padding-left: 60px;
+}
+.msCard{
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E0DEF7;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 42px;
+    left: 15px;
+}
+.msCard img{
+   width: 100%;
+   max-width: 25px;
+}
+
+
+/* responsive started  */
+@media (max-width: 575px){
+    .SelctPaymentsData h2 {
+        font-size: 16px;
+        line-height: 10px;
+    }
+    .SelctPaymentsData p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+}
+@media (max-width: 480px){
+    .SelctPaymentsData h2 {
+        font-size: 14px;
+        line-height: 8px;
+    }
+    .SelctPaymentsData p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .form1 {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .wt {
+        width: 100% !important;
+        text-align: center;
+    }
+    .wst {
+        width: 100% !important;
+        text-align: center;
+    }
+
+}

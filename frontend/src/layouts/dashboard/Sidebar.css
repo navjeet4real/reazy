@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600&display=swap');
+
+* {font-family: 'Inter';font-style: normal;margin: 0;padding: 0;text-decoration: none;}
+a.active,
+a:hover {color: #6341E0;background: #F7F7FD;border-radius: 6px;}
+.btn-primary {width: 100%;background: #6341E0;border: 1px solid #6341E0;border-radius: 8px;font-weight: 600;font-size: 14px;line-height: 20px;
+  color: #FFFFFF;padding: 8px 14px;cursor: pointer;}
+
+  .Sidebar {position: relative;width: 280px;}
+  .sidebar_sec {
+    color: #adadad;
+    text-align: left;
+    transition: width, left, right, 0.3s;
+    position: relative;
+    z-index: 1009;
+    height: 100vh;
+    width: 100%;
+    min-width: 100%;
+    background-color: white;
+    box-shadow: 0.5px 0.866px 2px 0px rgb(0 0 0 / 15%);
+}
+.sidebar_layout {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+  overflow-y: hidden;
+}
+
+.sidebar header {border: none;margin: 30px 24px;}
+.sidebar a {font-weight: 600;font-size: 16px;line-height: 24px;color: #21114D;transition: all .5s ease;align-items: center;
+  padding: 9px 12px;gap: 15px;margin: 8px 24px;display: flex;width: auto;}
+.sidebar a i {font-size: 23px;}
+.sidebar a span {letter-spacing: 1px;text-transform: uppercase;}
+
+.Purchase_Credits {background: #F7F7FD;border: 1px solid #E0DEF7;border-radius: 8px;padding: 20px 16px;margin: 24px 20px;}
+.Reazy_Credits {display: flex;gap: 6px;align-items: center;}
+.Purchase_Credits p{margin: 12px 0;font-weight: 600;font-size: 14px;line-height: 20px;color: #6341E0;}
+.user_details {border-top: 1px solid #E0DEF7;padding: 24px 8px;display: grid;grid-template-columns: auto 1fr auto;
+  align-items: center;grid-gap: 10px;}
+.user_details h5 span{font-weight: 400;}
+.user_details img {height: 40px; width: 40px; border-radius: 50%;}
+
+.sidebar_content{    flex-grow: 1;}
+
