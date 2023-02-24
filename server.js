@@ -15,7 +15,7 @@ const server = http.createServer(app);
 const DB = process.env.DBURI.replace("<PASSWORD>", process.env.DBPASSWORD)
 
 mongoose.connect(DB).then((prop) => {
-    console.log("Mongo Connecteddd !")
+    console.log("Mongo Connecteddd... !")
 }).catch((err) => {
     console.log(err)
 })
