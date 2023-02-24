@@ -74,7 +74,6 @@ const propertyController = {
     // validating user by id
       const user = await User.findOne({ user_id });
 
-
       if (!user) {
         res.status(400).json({
           staus: "error",
