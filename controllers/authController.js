@@ -45,7 +45,6 @@ const authController = {
       const token = signToken(userDoc._id);
 
       console.log(token, "dddddddddddddd");
-
       return res.status(200).json({
         status: "Success",
         message: "Logged In.",
@@ -71,7 +70,7 @@ const authController = {
       const existing_user = await User.findOne({ email: email });
 
       if (existing_user && existing_user.verified) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "User already registered. Please Login.",
         });
@@ -155,7 +154,7 @@ const authController = {
           message: "email is invalid or OTP expired",
         });
 
-        return;
+        return
       }
 
       if (user.verified) {
