@@ -43,6 +43,8 @@ export default function Router() {
         { path: "forgot", element: <ForgotPassword /> },
         { path: "listings", element: <Listings /> },
         { path: "add_address", element: <AddAddress /> },
+        { path: "property-information", element: <PropertyInformation /> },
+
         { path: "create_manual", element: <CreateManual /> },
 
         
@@ -88,5 +90,8 @@ const CreateProperty = Loadable(
   );
   const AddAddress = Loadable(
     lazy(() => import("../component/dashboard/AddAddress/AddAddress")),
+  );
+  const PropertyInformation =  Loadable(
+    lazy(() => import("../component/dashboard/PropertyInformation/PropertyInformation")),
   );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));
