@@ -15,7 +15,7 @@ const authController = {
       console.log(email, password, "ffffffffffffff");
 
       if (!email || !password) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "Both are required",
         });
@@ -29,13 +29,13 @@ const authController = {
         !userDoc ||
         !(await userDoc.correctPassword(password, userDoc.password))
       ) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "Email or Password is Incorect",
         });
       }
       if (!userDoc.verified) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "User not verified. We have sent you a mail to verify.",
         });
@@ -45,8 +45,7 @@ const authController = {
       const token = signToken(userDoc._id);
 
       console.log(token, "dddddddddddddd");
-      
-      res.status(200).json({
+      return res.status(200).json({
         status: "Success",
         message: "Logged In.",
         token,
@@ -71,7 +70,7 @@ const authController = {
       const existing_user = await User.findOne({ email: email });
 
       if (existing_user && existing_user.verified) {
-        res.status(400).json({
+        return res.status(400).json({
           status: "error",
           message: "User already registered. Please Login.",
         });
@@ -155,7 +154,7 @@ const authController = {
           message: "email is invalid or OTP expired",
         });
 
-        return;
+        return
       }
 
       if (user.verified) {
@@ -257,7 +256,7 @@ const authController = {
     }
 
     const resetToken = user.createPasswordResetToken();
-    await user.save({ validateBeforeSave: false });0
+    await user.save({ validateBeforeSave: false }); 0
     // console.log(resetToken, "reset  ----------------------  Token");
     const resetURL = `http://localhost:3000/auth/new-password/?token=${resetToken}`;
     console.log(resetURL, ":reset URL");

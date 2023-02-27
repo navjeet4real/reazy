@@ -1,10 +1,7 @@
 import { PATH_DASHBOARD } from "./routes/paths";
 
-//  for stage url.
-export const BASE_URL = "http://3.105.195.195:8000"
-
-// for local 
-// export const BASE_URL = "http://localhost:8000"
+// export const BASE_URL = "http://3.105.195.195:8000"
+export const BASE_URL = "http://localhost:8000"
 
 
 
