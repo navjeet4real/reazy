@@ -8,7 +8,8 @@ const bodyParser = require('body-parser')
 const xss = require('xss-clean');
 const cors = require("cors");
 const app = express()
-const routes = require('./routes/index')
+// const routes = require('./routes/index')
+const routes = require('./Routes/index')
 
 app.use(express.json({
     limit: '10kb'
