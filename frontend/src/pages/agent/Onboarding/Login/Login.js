@@ -1,13 +1,13 @@
 import React from "react";
 import "./Login.css";
-import MainLogo from "../../../Images/MainLogo.png";
+import MainLogo from "../../../../Images/MainLogo.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "swiper/css";
 import "swiper/css/navigation";
-import LoginForm from "../../../sections/auth/LoginForm";
+import LoginForm from "../../../../sections/auth/LoginForm";
 
 function Login() {
   const { isLoggedIn } = useSelector((state) => state.auth);
