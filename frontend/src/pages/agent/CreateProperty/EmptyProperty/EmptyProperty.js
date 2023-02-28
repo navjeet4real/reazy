@@ -1,7 +1,7 @@
 import React from "react";
 import "./EmptyProperty.css";
 
-import Illustration from "../../../Images/Illustration.png";
+import Illustration from "../../../../Images/Illustration.png";
 // import {  Stack } from "@mui/material"; 
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Verify.css";
-import VerifyForm from "../../../sections/auth/VerifyForm";
+import VerifyForm from "../../../../sections/auth/VerifyForm";
 
 function Verify() {
   return (

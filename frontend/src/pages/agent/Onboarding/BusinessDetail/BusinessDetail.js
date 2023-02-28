@@ -2,7 +2,7 @@ import React from "react";
 import "./BuisenessDetail.css";
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import BusinessProfileForm from "../../../sections/auth/BusinessProfileForm";
+import BusinessProfileForm from "../../../../sections/auth/BusinessProfileForm";
 
 function BusinessDetail() {
   return (

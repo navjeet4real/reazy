@@ -1,7 +1,7 @@
 import { Button, Link, Stack } from "@mui/material";
 import React from "react";
 import "../../common.css";
-import copy_icon from "../../../Images/copy_icon.png";
+import copy_icon from "../../../../Images/copy_icon.png";
 import { Link as RouterLink } from "react-router-dom";
 
 
