@@ -6,7 +6,7 @@ const otpGenerator = require("otp-generator");
 const crypto = require("crypto");
 const { promisify } = require("util");
 const signToken = (userId) => jwt.sign({ userId }, process.env.SECRET_KEY);
-const mailService = require("../services/mailer");
+// const mailService = require("../services/mailer");
 
 const authController = {
   login: async (req, res, next) => {
@@ -15,7 +15,7 @@ const authController = {
       console.log(email, password, "ffffffffffffff");
 
       if (!email || !password) {
-        return res.status(400).json({
+       return res.status(400).json({
           status: "error",
           message: "Both are required",
         });
@@ -45,6 +45,7 @@ const authController = {
       const token = signToken(userDoc._id);
 
       console.log(token, "dddddddddddddd");
+      
       return res.status(200).json({
         status: "Success",
         message: "Logged In.",
@@ -256,7 +257,7 @@ const authController = {
     }
 
     const resetToken = user.createPasswordResetToken();
-    await user.save({ validateBeforeSave: false }); 0
+    await user.save({ validateBeforeSave: false });0
     // console.log(resetToken, "reset  ----------------------  Token");
     const resetURL = `http://localhost:3000/auth/new-password/?token=${resetToken}`;
     console.log(resetURL, ":reset URL");

@@ -12,7 +12,7 @@ const propertyController = {
         city,
         state,
         postcode,
-        representing,
+        representingAs,
       } = req.body;
 
       // validating user by id
@@ -36,7 +36,7 @@ const propertyController = {
         city,
         state,
         postcode,
-        representing,
+        representingAs,
       });
 
 

@@ -4,10 +4,7 @@ import "../../common.css";
 import copy_icon from "../../../../Images/copy_icon.png";
 import { Link as RouterLink } from "react-router-dom";
 
-
 const CreateManual = () => {
-
-  
   return (
     <>
       <div className="Listings">

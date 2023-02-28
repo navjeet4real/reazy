@@ -285,11 +285,11 @@ export function CompleteProfile(formValues) {
           slice.actions.updateIsLoading({ error: true, isLoading: false })
         );
       })
-      .finally(() => {
-        if (!getState().auth.error) {
-          window.location.href = "/auth/business-details";
-        }
-      });
+      // .finally(() => {
+      //   if (!getState().auth.error) {
+      //     window.location.href = "/auth/business-details";
+      //   }
+      // });
   };
 }
 
