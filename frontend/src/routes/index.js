@@ -44,7 +44,7 @@ export default function Router() {
         { path: "listings", element: <Listings /> },
         { path: "add_address", element: <AddAddress /> },
         { path: "property-information", element: <PropertyInformation /> },
-        { path: "PropertyInfoSecond", element: <PropertyInfoSecond /> },
+        { path: "property-info-second", element: <PropertyInfoSecond /> },
 
         { path: "create_manual", element: <CreateManual /> },
 
@@ -90,12 +90,12 @@ const CreateProperty = Loadable(
     lazy(() => import("../pages/agent/CreateProperty/CreateManual/CreateManual")),
   );
   const AddAddress = Loadable(
-    lazy(() => import("../component/dashboard/AddAddress/AddAddress")),
+    lazy(() => import("../pages/agent/CreateProperty/AddAddress/AddAddress")),
   );
   const PropertyInformation =  Loadable(
-    lazy(() => import("../component/dashboard/PropertyInformation/PropertyInformation")),
+    lazy(() => import("../pages/agent/CreateProperty/PropertyInformation/PropertyInformation")),
   ); 
   const PropertyInfoSecond =  Loadable(
-    lazy(() => import("../component/dashboard/PropertyInfoSecond/PropertyInfoSecond")),
+    lazy(() => import("../pages/agent/CreateProperty/PropertyInfoSecond/PropertyInfoSecond")),
   );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));
