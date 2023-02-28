@@ -2,7 +2,7 @@ import React from "react";
 import "./InviteTeam.css"
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import InviteTeamForm from "../../../sections/auth/InviteTeamForm";
+import InviteTeamForm from "../../../../sections/auth/InviteTeamForm";
 
 function InviteTeam() {
     

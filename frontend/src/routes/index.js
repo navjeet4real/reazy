@@ -44,6 +44,7 @@ export default function Router() {
         { path: "listings", element: <Listings /> },
         { path: "add_address", element: <AddAddress /> },
         { path: "property-information", element: <PropertyInformation /> },
+        { path: "PropertyInfoSecond", element: <PropertyInfoSecond /> },
 
         { path: "create_manual", element: <CreateManual /> },
 
@@ -59,39 +60,42 @@ export default function Router() {
 }
 
 const LoginPage = Loadable(
-    lazy(() => import("../component/agentAuth/Login/Login")),
+    lazy(() => import("../pages/agent/Onboarding/Login/Login")),
   );
   const RegisterPage = Loadable(
-    lazy(() => import("../component/agentAuth/Register/Register")),
+    lazy(() => import("../pages/agent/Onboarding/Register/Register")),
   );
   const VerifyOTP = Loadable(
-    lazy(() => import("../component/agentAuth/Verify/Verify")),
+    lazy(() => import("../pages/agent/Onboarding/Verify/Verify")),
   );
   const ForgotPassword = Loadable(
-    lazy(() => import("../component/agentAuth/ForgotPassword/ForgotPassword")),
+    lazy(() => import("../pages/agent/Onboarding/ForgotPassword/ForgotPassword")),
   );
   const CompleteProfile = Loadable(
-    lazy(() => import("../component/agentAuth/CompleteProfile/CompleteProfile")),
+    lazy(() => import("../pages/agent/Onboarding/CompleteProfile/CompleteProfile")),
   );
   const InviteTeam = Loadable(
-    lazy(() => import("../component/agentAuth/InviteTeam/InviteTeam")),
+    lazy(() => import("../pages/agent/Onboarding/InviteTeam/InviteTeam")),
   );
   const BusinessDetail = Loadable(
-    lazy(() => import("../component/agentAuth/BusinessDetail/BusinessDetail")),
+    lazy(() => import("../pages/agent/Onboarding/BusinessDetail/BusinessDetail")),
   );
 const CreateProperty = Loadable(
-    lazy(() => import("../component/dashboard/EmptyProperty/EmptyProperty")),
+    lazy(() => import("../pages/agent/CreateProperty/EmptyProperty/EmptyProperty")),
   );
   const Listings = Loadable(
-    lazy(() => import("../component/dashboard/Listings/Listings")),
+    // lazy(() => import("../pages/agent/Listings/Listings/Listings")),
   );
   const CreateManual = Loadable(
-    lazy(() => import("../component/dashboard/CreateManual/CreateManual")),
+    lazy(() => import("../pages/agent/CreateProperty/CreateManual/CreateManual")),
   );
   const AddAddress = Loadable(
     lazy(() => import("../component/dashboard/AddAddress/AddAddress")),
   );
   const PropertyInformation =  Loadable(
     lazy(() => import("../component/dashboard/PropertyInformation/PropertyInformation")),
+  ); 
+  const PropertyInfoSecond =  Loadable(
+    lazy(() => import("../component/dashboard/PropertyInfoSecond/PropertyInfoSecond")),
   );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));

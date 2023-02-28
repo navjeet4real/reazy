@@ -2,7 +2,7 @@ import React from "react";
 import "./Profile.css";
 import { Button, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import CompleteProfileForm from "../../../sections/auth/CompleteProfileForm";
+import CompleteProfileForm from "../../../../sections/auth/CompleteProfileForm";
 
 
 function CompleteProfile() {
