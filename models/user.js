@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
   avatarUrl: {
     type: String,
   },
+  role: {
+    type: String,
+    default: "agent"
+  },
   email: {
     type: String,
     required: [true, "Email is required"],
@@ -54,7 +58,7 @@ const userSchema = new mongoose.Schema({
   },
   creadit: {
     type: Number,
-    default: 0
+    default: 0,
   },
   otp_expiry_time: {
     type: Date,
@@ -70,7 +74,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("otp") || !this.otp) return next();
-  
+
   this.otp = await bcrypt.hash(this.otp.toString(), 12);
 
   console.log(this.otp.toString(), "FROM PRE SAVE HOOK");
@@ -97,10 +101,10 @@ userSchema.methods.correctPassword = async function (
   inputPassword,
   userPassword
 ) {
-  console.log(inputPassword, "input ------- pass", userPassword)
-  const value =  await bcrypt.compare(inputPassword, userPassword);
-  console.log(value,"value")
-  return value
+  console.log(inputPassword, "input ------- pass", userPassword);
+  const value = await bcrypt.compare(inputPassword, userPassword);
+  console.log(value, "value");
+  return value;
 };
 
 userSchema.methods.correctOTP = async function (candidateOTP, userOTP) {
@@ -127,7 +131,7 @@ userSchema.methods.chagedPasswordAfter = function (timestamp) {
     );
     return timestamp < changedTimeStamp;
   }
-    // FALSE MEANS NOT CHANGED
+  // FALSE MEANS NOT CHANGED
   return false;
 };
 
