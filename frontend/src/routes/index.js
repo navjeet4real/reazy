@@ -96,6 +96,6 @@ const CreateProperty = Loadable(
     lazy(() => import("../component/dashboard/PropertyInformation/PropertyInformation")),
   ); 
   const PropertyInfoSecond =  Loadable(
-    lazy(() => import("../component/dashboard/PropertyInfoSecond/PropertyInfoSecond")),
+    lazy(() => import("../pages/agent/CreateProperty/PropertyInfoSecond/PropertyInfoSecond")),
   );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));
