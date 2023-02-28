@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema({
   otp: {
     type: String,
   },
-  creadit: {
+  credit: {
     type: Number,
     default: 0,
   },

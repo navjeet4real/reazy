@@ -6,17 +6,16 @@ const otpGenerator = require("otp-generator");
 const crypto = require("crypto");
 const { promisify } = require("util");
 const signToken = (userId) => jwt.sign({ userId }, process.env.SECRET_KEY);
-const mailService = require("../services/mailer");
-const fs = require('fs');
-const authController = {
+// const mailService = require("../services/mailer");
 
+const authController = {
   login: async (req, res, next) => {
     try {
       const { email, password } = req.body;
       console.log(email, password, "ffffffffffffff");
 
       if (!email || !password) {
-        return res.status(400).json({
+       return res.status(400).json({
           status: "error",
           message: "Both are required",
         });
@@ -46,6 +45,7 @@ const authController = {
       const token = signToken(userDoc._id);
 
       console.log(token, "dddddddddddddd");
+      
       return res.status(200).json({
         status: "Success",
         message: "Logged In.",
@@ -55,7 +55,6 @@ const authController = {
       return res.status(500).json({ msg: err.message });
     }
   },
-
   register: async (req, res, next) => {
     try {
       console.log("hittttttttttt", req.body);
@@ -94,7 +93,6 @@ const authController = {
       return res.status(500).json({ msg: err.message });
     }
   },
-
   sendOtp: async (req, res, next) => {
     try {
       const { userId } = req;
@@ -142,7 +140,6 @@ const authController = {
       return res.status(500).json({ msg: err.message });
     }
   },
-
   verifyOtp: async (req, res, next) => {
     try {
       const { email, otp } = req.body;
@@ -193,7 +190,6 @@ const authController = {
       return res.status(500).json({ msg: error.message });
     }
   },
-
   protect: async (req, res, next) => {
     try {
       // 1)  getting token (jwt) and check if it's available
@@ -248,7 +244,6 @@ const authController = {
       return res.status(500).json({ msg: err.message });
     }
   },
-
   forgotPassword: async (req, res, next) => {
     // console.log(req.body, "reqqqqqqqqqqqqqqq")
     const user = await User.findOne({ email: req.body.email });
@@ -262,7 +257,7 @@ const authController = {
     }
 
     const resetToken = user.createPasswordResetToken();
-    await user.save({ validateBeforeSave: false }); 0
+    await user.save({ validateBeforeSave: false });0
     // console.log(resetToken, "reset  ----------------------  Token");
     const resetURL = `http://localhost:3000/auth/new-password/?token=${resetToken}`;
     console.log(resetURL, ":reset URL");
@@ -283,7 +278,6 @@ const authController = {
       });
     }
   },
-
   resetPassword: async (req, res, next) => {
     try {
       // console.log(req.body,"req.bodyreq.bodyreq.bodyreq.bodyreq.body")
@@ -334,46 +328,30 @@ const authController = {
     }
   },
 
-
   completeProfile: async (req, res) => {
     try {
       console.log(req.body, "completeProfile (req.body");
-      const { email, position } = req.body;
-      const {  avatarUrl } = req;
-      console.log(avatarUrl, "...........");
+      const { email, position, avatarUrl } = req.body;
 
-      // fs.readFile(avatarUrl, (err, buffer) => {
-      //   if (err) {
-      //     console.error(err);
-      //     return;
-      //   }
-      //   const data = JSON.parse(buffer);
-      //   console.log(data, "...........");
-      //   // Use the data as needed in your application
-      // });
-      
-      
-      
       const user = await User.findOne({
         email,
       });
 
       if (!user) {
-       return res.status(400).json({
+        res.status(400).json({
           staus: "error",
           message: "email is invalid",
         });
+        return;
       }
 
-    //  avatarUrl = req.files?.avatarUrl;
-    //  console.log(avatarUrl, "**********");
       user.position = position;
 
       await user.save({ new: true, validateModifyOnly: true });
 
-      const token = signToken(user._id);
+      // const token = signToken(user._id);
 
-     return res.status(200).json({
+      res.status(200).json({
         status: "Success",
         message: "Profile Saved.",
       });

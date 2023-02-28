@@ -22,7 +22,7 @@ const propertyDetail = mongoose.Schema(
     postcode: {
       type: String,
     },
-    representing: {
+    representingAs: {
       type: String,
     },
     //----------------property information----------------
